@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,6 +19,10 @@ public class Main {
         System.out.println(newShop);
 
         newShop.removeCar(newShop.getCarIndex(car3));
+        System.out.println(newShop);
+
+        String file = "files/cars.txt";
+        newShop.loadCarsFromFile(file);
         System.out.println(newShop);
 
 

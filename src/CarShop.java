@@ -13,13 +13,22 @@ public class CarShop {
     }
 
     public void removeCar(Integer index) {
-        if((Integer) index != null) {
+        if(index != null) {
             carsList.remove((int) index);
         } else {
             System.out.println("Brak samochodu w bazie");
         }
     }
 
+    private void loadCarsFromList(List<Car> carsToLoad) {
+       carsList.addAll(carsToLoad);
+    }
+
+    public void loadCarsFromFile(String filePathname) {
+        FileRepository newBase = new FileRepository();
+        List<Car> carsList = newBase.load(filePathname);
+        loadCarsFromList(carsList);
+    }
 
     public Integer getCarIndex(Car car) {
         return carsList.contains(car) ? carsList.indexOf(car) : null;
