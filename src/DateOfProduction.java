@@ -18,7 +18,7 @@ public class DateOfProduction {
 
     @Override
     public String toString() {
-        return "DateOfProduction{" + yearOfProduction +
+        return "{" + yearOfProduction +
                 " - " + monthOfProduction +
                 '}';
     }
