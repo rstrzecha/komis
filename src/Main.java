@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -21,9 +18,18 @@ public class Main {
         newShop.removeCar(newShop.getCarIndex(car3));
         System.out.println(newShop);
 
-        String file = "files/cars.txt";
+        String file = "files/cas.txt";
         newShop.loadCarsFromFile(file);
-        System.out.println(newShop);
+        System.out.println(newShop.getCarsList());
+
+        Car carFromBuilder = Car.buildCar("Polonez","Borewicz")
+                .buildEngine("DIESEL",1.8,"MANUAL")
+                .madeIn(1970,11)
+                .setLink("link_do_Poldka")
+                .setPrice(30000)
+                .build();
+
+        System.out.println(carFromBuilder);
 
 
     }

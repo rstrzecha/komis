@@ -25,7 +25,7 @@ public class CarShop {
     }
 
     public void loadCarsFromFile(String filePathname) {
-        FileRepository newBase = new FileRepository();
+        GetFileRepository newBase = new GetFileRepository();
         List<Car> carsList = newBase.load(filePathname);
         loadCarsFromList(carsList);
     }
