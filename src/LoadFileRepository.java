@@ -16,10 +16,15 @@ public class LoadFileRepository implements LoadRepository {
             while (scanner.hasNextLine()) {
                 String content =scanner.nextLine();
                 String [] carDetails = content.split(",");
-                Car car = new Car(carDetails[0],carDetails[1],carDetails[2], Double.parseDouble(carDetails[3])
-                        ,carDetails[4], Integer.parseInt(carDetails[5]), Integer.parseInt(carDetails[6])
-                        ,carDetails[7], Float.parseFloat(carDetails[8]));
-                 carsToLoad.add(car);
+
+                Car car = Car.buildCar(carDetails[0],carDetails[1])
+                        .buildEngine(carDetails[2], Double.parseDouble(carDetails[3]),carDetails[4])
+                        .madeIn(Integer.parseInt(carDetails[5]), Integer.parseInt(carDetails[6]))
+                        .setLink(carDetails[7])
+                        .setPrice(Float.parseFloat(carDetails[8]))
+                        .build();
+
+                carsToLoad.add(car);
             }
         }
         catch (FileNotFoundException exception) {

@@ -33,7 +33,6 @@ public class Car {
                 '}';
     }
 
-
     public static CarBuilder buildCar(String make, String model) {
         return new CarBuilder(make, model);
     }
@@ -68,12 +67,5 @@ public class Car {
             car.price = price;
             return this;
         }
-
-
-
-
     }
-
 }
-
-

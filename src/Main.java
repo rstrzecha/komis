@@ -19,7 +19,7 @@ public class Main {
         System.out.println(newShop);
 
         String file = "files/cas.txt";
-        newShop.loadCarsFromFile(file);
+        newShop.loadCarsFromRepo(file);
         System.out.println(newShop.getCarsList());
 
         Car carFromBuilder = Car.buildCar("Polonez","Borewicz")
@@ -29,8 +29,7 @@ public class Main {
                 .setPrice(30000)
                 .build();
 
-        System.out.println(carFromBuilder);
-
-
+        newShop.addNewCar(carFromBuilder);
+        System.out.println(newShop.getCarsList());
     }
 }

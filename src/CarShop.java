@@ -33,7 +33,7 @@ public class CarShop {
        carsList.addAll(carsToLoad);
     }
 
-    public void loadCarsFromFile(String filePathname) {
+    public void loadCarsFromRepo(String filePathname) {
         List<Car> carsList = newBase.load(filePathname);
         loadCarsFromList(carsList);
     }
