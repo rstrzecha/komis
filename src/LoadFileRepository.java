@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class GetFileRepository implements GetRepository {
+public class LoadFileRepository implements LoadRepository {
     public List<Car> load(String pathName){
 
         List<Car> carsToLoad = new ArrayList<>();

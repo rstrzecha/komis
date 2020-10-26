@@ -3,9 +3,18 @@ import java.util.List;
 
 public class CarShop {
     private List<Car> carsList = new ArrayList<>();
+    private LoadRepository newBase;
+
+    public CarShop() {
+        newBase = new LoadFileRepository();
+    }
 
     public List<Car> getCarsList() {
         return carsList;
+    }
+
+    public void setNewBase(LoadRepository newBaseType) {
+        this.newBase = newBaseType;
     }
 
     public void addNewCar(Car carToAdd) {
@@ -25,7 +34,6 @@ public class CarShop {
     }
 
     public void loadCarsFromFile(String filePathname) {
-        GetFileRepository newBase = new GetFileRepository();
         List<Car> carsList = newBase.load(filePathname);
         loadCarsFromList(carsList);
     }

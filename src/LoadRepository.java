@@ -1,5 +1,5 @@
 import java.util.List;
 
-public interface GetRepository {
+public interface LoadRepository {
     List<Car> load(String s);
 }
