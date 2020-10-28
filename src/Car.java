@@ -7,16 +7,7 @@ public class Car {
     private String picture_link;
     private float price;
 
-    public Car(String make, String model, String fuelType, double capacity, String transmitionType,int yearOfProduction, int monthOfProduction, String picture_link, float price) {
-        this.make = make;
-        this.model = model;
-        this.engine = new Engine(fuelType, capacity, transmitionType);
-        this.dateOfProduction = new DateOfProduction(yearOfProduction, monthOfProduction);
-        this.picture_link = picture_link;
-        this.price = price;
-    }
-
-    public Car(String make, String model) {
+    private Car(String make, String model) {
         this.make = make;
         this.model = model;
     }
